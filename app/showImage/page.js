@@ -25,6 +25,7 @@ const App = () => {
     };
 
     fetchImage();
+    
   }, []);
 
   const [inputText,setInputText]=useState('')
@@ -35,10 +36,11 @@ const App = () => {
   
 
   const submitCaptcha = async () => {
+
     try {
       // Send POST request to the server with the input text
-       const response = await axios.post('http://localhost:3000/api/captcha_processing', { token:inputText });
-       console.log("after submitinggggggggggggg")
+       const response = await axios.post('https://captcha-api-7ym4.vercel.app/api/captcha_processing', { token:inputText });
+       
        
         
         console.log(response.status)
@@ -54,7 +56,9 @@ const App = () => {
 
      
     } catch (error) {
+
       alert("error while submiting")
+
       console.error('Error submitting captcha:', error);
     }
   };

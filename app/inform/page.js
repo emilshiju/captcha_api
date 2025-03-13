@@ -19,7 +19,7 @@ const Inform=()=>{
 
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/captcha_processing')
+                const response = await axios.get('https://captcha-api-7ym4.vercel.app/api/captcha_processing')
                
                 console.log("heree")
                 console.log(response.data.status)
@@ -42,14 +42,15 @@ const Inform=()=>{
 
     },[])
 
+
+    
     useEffect(() => {
         if (data) {
             
             router.push("/showImage"); 
         }
     }, [data, router]);
-    console.log("dataaaaaaaaaaaa")
-    console.log(data)
+
 
 
     

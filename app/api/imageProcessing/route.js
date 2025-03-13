@@ -16,6 +16,7 @@ LoadDB()
 export async function POST(req) {
   
   try {
+
     const data = await req.json();
     console.log("Received Data:", data.status);  // Log received data
 
@@ -49,9 +50,7 @@ export async function GET(req){
   try{
 
     const data=await CaptchaModel.findOne()
-
     
-
 
 
     return NextResponse.json({data:data})

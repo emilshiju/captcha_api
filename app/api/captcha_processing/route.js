@@ -16,12 +16,10 @@ export async function GET() {
     try {
         
         const getCaptcha=await CaptchaModel.findOne({})
-        console.log("take captcha")
-        console.log(getCaptcha)
+       
 
         if (getCaptcha?.status==false){
 
-        
 
         return NextResponse.json({status:true }, {status: 200 });
 
