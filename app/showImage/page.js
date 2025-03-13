@@ -39,7 +39,7 @@ const App = () => {
 
     try {
       // Send POST request to the server with the input text
-       const response = await axios.post('https://captcha-api-7ym4.vercel.app/api/captcha_processing', { token:inputText });
+       const response = await axios.post('https://captcha-api-eta.vercel.app/api/captcha_processing', { token:inputText });
        
        
         
