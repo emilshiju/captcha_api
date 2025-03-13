@@ -35,7 +35,7 @@ export async function GET(req) {
   try {
     const data = await CaptchaModel.findOne();
 
-    if (data?.data.status == true) {
+    if (data?.status == true) {
       await CaptchaModel.deleteMany();
       return NextResponse.json({ data: data });
       
